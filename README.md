@@ -58,9 +58,25 @@ docker build -t pytorch-jupyter .
 docker run -p 8888:8888 --name jupyter-env pytorch-jupyter
 
 # 5
-# go to this url to see the notebooks in this repo in your Jupyter seutp!: http://localhost:8888/
+# go to this url to see the notebooks in this repo in your Jupyter setup!: http://localhost:8888/
 ```
 
+## 🚀 Alternative Setup with python pip
+
+```bash
+# 1. Install python 3.11
+sudo apt install -y python3.11 python3.11-venv python3.11-dev
+
+# 2. Create a virtual environment
+python3.11 -m venv .venv
+
+# 3. Activate the virtual environment
+source .venv/bin/activate
+
+# 4. Install the dependencies
+pip install --upgrade pip
+pip install -r requirements.txt
+```
 
 
 <!--
